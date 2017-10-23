@@ -1,1 +1,1 @@
-# hadoop-
+# Coursework projects (CSC555)
