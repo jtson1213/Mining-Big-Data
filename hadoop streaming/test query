@@ -1,0 +1,26 @@
+create table lineorder (
+  lo_orderkey          int,
+  lo_linenumber        int,
+  lo_custkey           int,
+  lo_partkey           int,
+  lo_suppkey           int,
+  lo_orderdate         int,
+  lo_orderpriority     varchar(15),
+  lo_shippriority      varchar(1),
+  lo_quantity          int,
+  lo_extendedprice     int,
+  lo_ordertotalprice   int,
+  lo_discount          int,
+  lo_revenue           int,
+  lo_supplycost        int,
+  lo_tax               int,
+  lo_commitdate         int,
+  lo_shipmode          varchar(10)    
+);
+
+
+SELECT lo_quantity, SUM(lo_revenue) 
+FROM lineorder 
+WHERE lo_discount < 3 
+GROUP BY lo_quantity; 
+
